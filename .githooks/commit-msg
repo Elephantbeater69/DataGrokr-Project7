@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+grep -Eq '^(feat|fix|docs|test|chore|refactor)(\([a-zA-Z0-9_-]+\))?: .+' "$1" || {
+  echo "Use a commit prefix such as feat:, fix:, docs:, test:, or chore:"
+  exit 1
+}
